@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 페이지</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <nav id="topMenu">
+        <!-- <a href="./index.html">
+                <img src="./img/대학go.png" alt="Logo">
+            </a> -->
+        <a href="./complete.html"><img src="./image/logo-removebg-preview.png" alt=""  class="logo"></a>
+        <ul>
+            <li><a class="menuLink" href="#" onclick="loginPlease()">학교 정보 조회</a></li>
+            <li><a class="menuLink" href="#" onclick="loginPlease()">과목 정보 조회</a></li>
+            <li><a class="menuLink" href="#" onclick="loginPlease()">맞춤형 대학 조회</a></li>
+            <li><a class="menuLink" href="./login/login.html">로그인</a></li>
+            <li><a class="menuLink" href="./register/register.html">회원가입</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="main-box">
+            <img class="img1" src="./image/background.png" alt="" width="100%">
+            <h1 class="a">내가 원하는 진로, 나만의 학업설계</h1>
+            <h1 class="b">꿈을 향한 첫 걸음, 고교학점제에서 시작!</h1>
+            <a href="#"><div class="start-box" onclick="loginPlease()">시작하기</div></a>
+        </div>
+
+        <div class="empty-box"></div>
+
+        <div class="main2-box">
+            <h1 class="h13">고교학점제, 왜 필요할까요?</h1>
+
+
+            <div class="flex">
+                <div class="box">
+                    <div class="why-box">고교학점제가 필요한 이유</div>
+                    <p>확일적인 교육과정에서 벗어나 학생들의 <br>
+                        개별적 특성과 진로에 맞는 교육을 제공 <br>
+                        하고, 미래 사회에 필요한 역량을 키우기 <br>
+                        위해서입니다.</p>
+
+                    <!-- <img class="img-img" src="./image/Vector.png" alt=""> -->
+                </div>
+                <div class="box">
+                    <div class="why-box">내가 선택한 지로 선택 및 추천</div>
+
+                    <p>자신이 원하는 진로 선태시 선택한 <br>
+                        진로에 대해 맞는 과목을 추천 해주며 <br>
+                        학생들이 자신이 원한는 진로에 갈 수 <br>
+                        있도록 도움을 줍니다</p>
+                    <img class="img-img" src="./image/🦆 icon _school_.png" alt="">
+                </div>
+                <div class="box">
+                    <div class="why-box">학습 동기 및 성취도 향상</div>
+
+                    <p>학생들이 원하는 진로에 대한 과목을<br>
+                        추천 받으면 학생의 원하는 진로에 <br>
+                        도움이 되는 과목 학습 만족도 높아지고, <br>
+                        이는 성적 향상에 <br>
+                        좋은 영향을 줄 수 있습니다</p>
+                    <img class="img-img" src="./image/🦆 icon _trending up_.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <img class="subject-img" src="./image/b77c9b6c6b36bfb8be99df409fab3d34c82616fa.jpg" alt="" width="100%">
+            <h1 class="h14">과목추천? 어떻게 이루어지나요?</h1>
+
+            <h2 class="h24">저희는 다음단계를 통해 과목을 추천 해드립니다</h2>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                        const container = document.querySelector('.subject-container');
+                        const boxes = document.querySelectorAll('.subject-box');
+
+                        function isFullyVisible(el) {
+                            const rect = el.getBoundingClientRect();
+                            return (
+                                rect.top >= 0 &&
+                                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                            );
+                        }
+
+                        function checkAndAnimate() {
+                            if (isFullyVisible(container)) {
+                                boxes.forEach(box => box.classList.add('visible'));
+                            } else {
+                                boxes.forEach(box => box.classList.remove('visible'));
+                            }
+                        }
+
+                        window.addEventListener('scroll', checkAndAnimate);
+                        window.addEventListener('resize', checkAndAnimate);
+                        checkAndAnimate();
+                    });
+            </script>
+
+            <div class="subject-container">
+                <div class="subject-box">
+                    <h2>STEP 01</h2>
+                    <h1>입력</h1>
+                    <p>학생의 진로 분야 입력</p>
+                </div>
+
+                <div class="subject-box">
+                    <h2>STEP 02</h2>
+                    <h1>분석</h1>
+                    <p>진로 분야 분석</p>
+                </div>
+
+                <div class="subject-box">
+                    <h2>STEP 03</h2>
+                    <h1>학교추천</h1>
+                    <p>진로에 관련된 학교 추천</p>
+                </div>
+
+                <div class="subject-box">
+                    <h2>STEP 04</h2>
+                    <h1>과목 추천</h1>
+                    <p>원하는 진로에 도움되는 과목 추천</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="in">
+            <span>Copyright. 2025 Aarsan. All rights reserved.</span><br>
+            <a href="https://www.instagram.com/">
+                <img src="./register/img/free-icon-instagram-4494488.png">
+            </a>
+            <a href="https://www.google.com/">
+                <img src="./register/img/icons8-구글-로고-48.png">
+            </a>
+            <a href="https://github.com/">
+                <img src="./register/img/free-icon-github-logo-25231.png">
+            </a>
+        </div>
+    </footer>
+    <script>
+          const params = new URLSearchParams(window.location.search);
+            if (params.get('logout') === '1') {
+                alert('로그아웃 처리 되었습니다');
+            }
+
+            function loginPlease() {
+                alert("로그인하고 이용해주세요");
+            }
+    </script>
+</body>
+
+</html>

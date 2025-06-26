@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>진로 맞춤 고교학점제 도우미</title>
+    <style>
+        /* Reset and Base Styles */
+        
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.1"
+  }
+}
+</script>
+</head>
+<body>
+    <header>
+         <nav id="topMenu">
+            <img src="./image/logo-removebg-preview.png" alt="" class="logo">
+        <ul>
+            <li><a class="menuLink" href="../myschool/school1/index.html">학교 정보 조회</a></li>
+            <li><a class="menuLink" href="../myschool/school2/index2.html">과목 정보 조회</a></li>
+            <li><a class="menuLink" href="../recommend/index.html">맞춤형 대학 조회</a></li>
+            <li class="menuLink"><form action="http://localhost:3000/api/logout">
+                <button type="submit" class="logout">로그아웃</button>
+            </form></li>
+
+        </ul>
+    </nav>
+        <nav class="container">
+            <div class="nav-links">
+                <a href="#/">홈</a>
+                <a href="#/major-to-subject">학과 → 과목 추천</a>
+                <a href="#/subject-to-major">과목 → 학과 추천</a>
+                <a href="#/info">고교학점제 정보</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div id="home-page" class="page"></div>
+        <div id="major-to-subject-page" class="page"></div>
+        <div id="subject-to-major-page" class="page"></div>
+        <div id="results-page" class="page"></div>
+        <div id="info-page" class="page"></div>
+        <div id="loading-page" class="page">
+            <div class="loading-spinner-container">
+                <svg class="loading-spinner" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <p class="loading-spinner-text">로딩 중...</p>
+            </div>
+        </div>
+    </main>
+
+ <footer>
+        <div class="in">
+             <span>Copyright. 2025 Ahsan. All rights reserved.</span><br>
+            <a href="https://www.instagram.com/">
+                <img src="../register/img/free-icon-instagram-4494488.png">
+            </a>
+            <a href="https://www.google.com/">
+                <img src="../register/img/icons8-구글-로고-48.png">
+            </a>
+            <a href="https://github.com/">
+                <img src="../register/img/free-icon-github-logo-25231.png">
+            </a>
+        </div>
+    </footer>
+<script src="./js/script.js"></script>
+</body>
+</html>

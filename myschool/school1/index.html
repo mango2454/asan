@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>서울 특성화고 목록</title>
+</head>
+
+<body>
+    <div class="container">
+
+    <nav id="topMenu">
+        <!-- <a href="./index.html">
+                    <img src="./img/대학go.png" alt="Logo">
+                </a> -->
+                <a href="/complete/complete.html"><img src="./image/logo-removebg-preview.png" alt="" class="logo"></a>
+        <ul>
+            <li><a class="menuLink" href="/myschool/school1/index.html">학교 정보 조회</a></li>
+            <li><a class="menuLink" href="../school2/index2.html">과목 정보 조회</a></li>
+            <li><a class="menuLink" href="/recommend/index.html">맞춤형 대학 조회</a></li>
+            <li class="menuLink">
+                <form action="http://localhost:3000/api/logout">
+                    <button type="submit" class="logout">로그아웃</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+  
+  <h1>서울 특성화고 학과 목록</h1>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="학교 이름을 입력하세요" oninput="filterSchools()" />
+  </div>
+  <div id="list"></div>
+  
+  <footer>
+        <div class="in">
+            <span>Copyright. 2025 Asan. All rights reserved.</span><br>
+            <a href="https://www.instagram.com/">
+                <img src="./img/free-icon-instagram-4494488.png">
+            </a>
+            <a href="https://www.google.com/">
+                <img src="./img/icons8-구글-로고-48.png">
+            </a>
+            <a href="https://github.com/">
+                <img src="./img/free-icon-github-logo-25231.png">
+            </a>
+        </div>
+    </footer>
+</div>
+
+</body>
+<script src="./js/script.js"></script>
+</html>
