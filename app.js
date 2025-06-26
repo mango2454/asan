@@ -41,7 +41,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 // 회원가입 라우트
-app.post('/api/register', async (req, res) => {
+app.post('https://6d5e-128-134-203-99.ngrok-free.app/api/register', async (req, res) => {
     const { username, password } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
     await new User({ username, password: hashedPassword }).save();
@@ -49,7 +49,7 @@ app.post('/api/register', async (req, res) => {
 });
 
 // 로그인 라우트
-app.post('/api/login', async (req, res) => {
+app.post('https://6d5e-128-134-203-99.ngrok-free.app/api/login', async (req, res) => {
     const { username, password } = req.body;
     const user = await User.findOne({ username });
     if (!user) return res.send("사용자를 찾을 수 없습니다.");
@@ -62,7 +62,7 @@ app.post('/api/login', async (req, res) => {
 });
 
 // 로그아웃
-app.get('/api/logout', (req, res) => {
+app.get('https://6d5e-128-134-203-99.ngrok-free.app/api/logout', (req, res) => {
     req.session.destroy(() => {
         res.redirect("/main.html?logout=1");
     });
